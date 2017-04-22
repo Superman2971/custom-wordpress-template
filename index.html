@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://unicornseniorliving.com/">
+	<meta property="og:title" content="Unicorn Senior Living by David Slomovic">
+	<meta property="og:description" content="Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah.">
+	<meta property="og:image" content="http://unicornseniorliving.com/favicon.png">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<title>Block Verify</title>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<link rel="stylesheet" href="./styles.css">
+	<!--[if gte IE 9]
+	<style type="text/css">
+		.button {
+			filter: none;
+		}
+	</style>
+	<![endif]-->
+	<script>
+		// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		// 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		// 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		// ga('create', 'UA-61672820-1', 'auto');
+		// ga('send', 'pageview');
+	</script>
+</head>
+<body class="body">
+	<!-- Main Page -->
+	<header class="page header">
+		<!-- Logo -->
+		<img class="logo" src="./UnicornSeniorLiving.png" alt="unicorn logo"/>
+		<!-- Sign Up Form -->
+		<div id="subscribe" class="subscribe">
+			<select id="message">
+				<option value="">Select an option</option>
+			  <option value="Adult child in need of advice">Adult child in need of advice</option>
+			  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
+			  <option value="Senior Living Executive">Senior Living Executive</option>
+			  <option value="Senior Living Staff">Senior Living Staff</option>
+			  <option value="Student interested in senior care">Student interested in senior care</option>
+			</select>
+			<input class="subscribe__input email" type="email" value="" id="email" placeholder="Email" required/>
+			<button id="test" class="button subscribe__button">
+				<span class="button__text">SUBMIT</span>
+			</button>
+			<div id="bad-email" style="display: none;">*valid email required*</div>
+		</div>
+		<div id="thanks" style="display: none;">
+			<div>Email Sent, we will respond to you soon. Thanks!</div>
+		</div>
+		<!-- Scroll Section -->
+		<div>
+			<a href="#more">Learn More</a>
+		</div>
+	</header>
+
+	<!-- About David Page -->
+	<section class="page">
+		<div>
+			<h1 id="more">
+				<span>Why Blockverify?</span>
+			</h1>
+			<p>We believe in the potential of blockchain technology to improve anti-counterfeit measures in different industries and have a significant positive social impact</p>
+		</div>
+	</section>
+
+	<!-- Preloading Page -->
+	<div class="preloader">
+		<div class="preloader__animation">
+			<span id="bubblingG_1" class="preloader__bubl"></span>
+			<span id="bubblingG_2" class="preloader__bubl"></span>
+			<span id="bubblingG_3" class="preloader__bubl"></span>
+		</div>
+	</div>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_PeLGvWG5kpTVWIC98bb1d");
+   })();
+</script>
+<script src="base.js"></script>
+</body>
+</html>
