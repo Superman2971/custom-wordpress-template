@@ -103,4 +103,13 @@ $(function() {
       }
     }
   });
+  
+  // Q&A CLICK
+  $(".faq-holder").click(function (event) {
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $(this).addClass('active');
+    }
+  });
 });
