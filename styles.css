@@ -179,6 +179,10 @@ section {
 .subscribe:after {
   clear: both;
 }
+.subscribe-container {
+  display: inline-block;
+  width: 100%;
+}
 .subscribe__input {
   display: block;
   width: 60%;
@@ -304,9 +308,7 @@ section {
 }
 #bad-email {
   font-size: 16px;
-  position: relative;
   text-align: left;
-  top: 8px;
 }
 #thanks {
   color: #fff;
@@ -481,6 +483,33 @@ section {
   margin: 0 0 16px;
   padding: 0;
   text-align: left;
+}
+
+/******************/
+/* BACK TO TOP */
+/******************/
+.back-to-top {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #2295ba;
+  color: #2295ba;
+  background-color: #fff;
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+  border-radius: 5px;
+  padding: 32px 16px 8px;
+  text-decoration: none;
+}
+.back-to-top:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-color: transparent transparent #2295ba transparent;
+  position: absolute;
+  top: 0;
+  right: 16px;
 }
 
 /******************/

@@ -33,7 +33,7 @@
 </head>
 <body class="body">
 	<!-- Main Page -->
-	<header class="page header center">
+	<header id="top" class="page header center">
 		<!-- Logo -->
 		<img class="logo" src="./UnicornSeniorLiving.png" alt="unicorn logo"/>
 		<!-- Sign Up Form -->
@@ -46,10 +46,12 @@
 			  <option value="Senior Living Staff">Senior Living Staff</option>
 			  <option value="Student interested in senior care">Student interested in senior care</option>
 			</select>
-			<input class="subscribe__input email" type="email" value="" id="email" placeholder="Email" required/>
-			<button id="test" class="button subscribe__button">
-				<span class="button__text">SUBMIT</span>
-			</button>
+			<div class="subscribe-container">
+				<input class="subscribe__input email" type="email" value="" id="email" placeholder="Email" required/>
+				<button id="test" class="button subscribe__button">
+					<span class="button__text">SUBMIT</span>
+				</button>
+			</div>
 			<div id="bad-email" style="display: none;">*valid email required*</div>
 		</div>
 		<div id="thanks" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
@@ -160,6 +162,9 @@
 	    </div>
 	  </div>
 	</section>
+
+	<!-- Back to Top -->
+	<a class="back-to-top" href="#top">Top</a>
 
 	<!-- Preloading Page -->
 	<div class="preloader">
