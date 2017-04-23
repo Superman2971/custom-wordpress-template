@@ -36,7 +36,7 @@ section {
   min-height: 100vh;
   position: relative;
   min-width: 100vw;
-  padding: 16px;
+  padding: 76px 16px;
 }
 .page.header {
   background-color: #2295ba;
@@ -55,9 +55,16 @@ section {
 .title {
   color: #fff;
   font: normal 300 24px Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 16px;
 }
 .title.dark {
   color: #000;
+  border-bottom: 1px solid #000;
 }
 
 /****************/
@@ -216,6 +223,9 @@ section {
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
 }
+.subscribe__input:hover {
+  background-color: #22a9b9;
+}
 .subscribe__button.button {
   width: 40%;
   float: right;
@@ -319,7 +329,7 @@ section {
   border: 12px solid transparent;
   border-color: #fff transparent transparent transparent;
   position: absolute;
-  top: 10px;
+  top: 6px;
   left: -30px;
 }
 .learn-more:after {
@@ -329,7 +339,7 @@ section {
   border: 12px solid transparent;
   border-color: #fff transparent transparent transparent;
   position: absolute;
-  top: 10px;
+  top: 6px;
   right: -30px;
 }
 .learn-more.dark {
@@ -345,16 +355,45 @@ section {
 /***************/
 /* About Section */
 /***************/
-.text-container {
-  color: #fff;
-  font: 400 16px/1 Arial, Helvetica, sans-serif;
+.about-container {
+  margin-top: 32px;
   max-width: 90%;
 }
-.text-container a {
+.about-container .image-container {
+  border-radius: 5px;
+  float: left;
+  margin: 16px 24px 24px 0;
+  overflow: hidden;
+  height: 300px;
+  width: 211px;
+}
+@media (max-width: 600px) {
+  .about-container .image-container {
+    float: none;
+    margin: 0 auto;
+  }
+}
+.about-container .image-container:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.about-container .image-container img {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}
+.about-container .text-container {
+  color: #fff;
+  font: 400 18px/1 Arial, Helvetica, sans-serif;
+}
+.about-container .text-container a {
   color: #fe6a07;
   cursor: pointer;
 }
-.text-container a:hover {
+.about-container .text-container a:hover {
   text-decoration: underline;
 }
 
@@ -362,10 +401,8 @@ section {
 /* FAQ Section */
 /***************/
 .faq-container {
-  border: 1px solid #2295ba;
-  border-radius: 5px;
   max-width: 90%;
-  padding: 16px;
+  padding: 16px 0;
 }
 .faq-holder {
   position: relative;
@@ -435,13 +472,13 @@ section {
 }
 .faq-holder .theAnswer-holder .theAnswer {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   margin-top: 10px;
   padding-left: 20px;
 }
 .faq-holder .theAnswer-holder .theAnswer p {
   font-weight: 500;
-  margin: 0;
+  margin: 0 0 16px;
   padding: 0;
   text-align: left;
 }
