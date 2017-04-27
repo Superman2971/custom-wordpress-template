@@ -61,7 +61,7 @@ $(function() {
   });
 
   // Email system
-  $('#test').click(function() {
+  $('#form').click(function() {
     if (isEmail($('#email').val()) && $('#message option:selected').val()) {
       emailjs.send("gmail", "template", {email: $('#email').val(), message: $('#message option:selected').val()});
       $('#subscribe').hide();
@@ -70,10 +70,38 @@ $(function() {
       $('#bad-email').show();
     }
   });
+  // Open Hidden Form
+  $('#chest').click(function() {
+    $('#treasure').hide();
+    $('#chapters').show();
+  });
+  // Hidden Chapter Form
+  $('#hidden').click(function() {
+    if (isCorrectCode($('#code').val()) && $('#chapter1 option:selected').val() &&
+      $('#chapter2 option:selected').val() && $('#chapter3 option:selected').val()) {
+      emailjs.send("gmail", "hidden", {chapter1: $('#chapter1').val(),
+        chapter2: $('#chapter2').val(), chapter3: $('#chapter3').val()});
+      $('#chapters').hide();
+      $('#treasure').show();
+       window.open('./hidden_chapter.pdf');
+    } else {
+      console.log(isCorrectCode($('#code').val()) && $('#chapter1 option:selected').val() &&
+      $('#chapter2 option:selected').val() && $('#chapter3 option:selected').val());
+      $('#failed-attempt').show();
+    }
+  });
 
   function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
+  }
+
+  function isCorrectCode(code) {
+    if (code.toLowerCase() === 'bonus') {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   // Active Spy Scroll (module/navi)
@@ -95,7 +123,7 @@ $(function() {
         var oS = target.offset().top;
         var topBack = 30;
         var top = oS > topBack ? oS - topBack : 0;
-        var time = Math.abs($(window).scrollTop() - oS)/50 * 100;
+        var time = Math.abs($(window).scrollTop() - oS)/50 * 10;
 
         $('html,body').animate({ scrollTop: top }, time, function(){ inScrolling = false; });
 

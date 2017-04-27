@@ -14,6 +14,8 @@
 	<title>Block Verify</title>
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<link rel="stylesheet" href="./styles.css">
+	<!-- Icomoon Icon Fonts-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!--[if gte IE 9]
 	<style type="text/css">
 		.button {
@@ -33,42 +35,48 @@
 </head>
 <body class="body">
 	<!-- Main Page -->
-	<header id="top" class="page header center">
-		<!-- Logo -->
-		<img class="logo" src="./UnicornSeniorLiving.png" alt="unicorn logo"/>
-		<!-- Sign Up Form -->
-		<div id="subscribe" class="subscribe">
-			<select id="message">
-				<option value="">Select an option</option>
-			  <option value="Adult child in need of advice">Adult child in need of advice</option>
-			  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
-			  <option value="Senior Living Executive">Senior Living Executive</option>
-			  <option value="Senior Living Staff">Senior Living Staff</option>
-			  <option value="Student interested in senior care">Student interested in senior care</option>
-			</select>
-			<div class="subscribe-container">
-				<input class="subscribe__input email" type="email" value="" id="email" placeholder="Email" required/>
-				<button id="test" class="button subscribe__button">
-					<span class="button__text">SUBMIT</span>
-				</button>
-			</div>
-			<div id="bad-email" style="display: none;">*valid email required*</div>
-		</div>
-		<div id="thanks" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
+	<header id="top" class="page teal center">
+	  <div class="top-images">
+			<!-- Logo -->
+			<img class="logo" src="./UnicornSeniorLiving.png" alt="unicorn logo"/>
+			<!-- Book Image -->
+	  	<img class="book" src="./book.png" alt="book cover"/>
+	  	<!-- Buy Now -->
+	  	<a href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank" class="button margin-top"><span class="button__text">Amazon $18.88</span></a>
+	  	<div class="buy-line">Purchase this book today!</div>
+	  </div>
 		<!-- Scroll Section -->
-		<a class="learn-more" href="#more">Learn More</a>
+		<!-- <a class="learn-more" href="#more">Learn More</a> -->
 	</header>
 
-	<!-- Buy Now Page -->
-	<section class="page center">
+	<!-- Features Page -->
+	<section class="container center">
 		<div id="more" class="scroll-to"></div>
-	  <div class="title dark">Buy Now Section</div>
+	  <div class="title dark">Featured Sections</div>
+		<div class="features-container">
+			<a href="#about" class="feature">
+				<i class="fa fa-user"></i>
+				<div class="info">About Author</div>
+			</a>
+			<a href="#faq" class="feature">
+				<i class="fa fa-question-circle-o"></i>
+				<div class="info">FAQ</div>
+			</a>
+			<a href="#secret" class="feature">
+				<i class="fa fa-lock"></i>
+				<div class="info">Hidden Chapter</div>
+			</a>
+			<a href="#contact" class="feature">
+				<i class="fa fa-envelope"></i>
+				<div class="info">Contact</div>
+			</a>
+		</div>
 		<!-- Scroll Section -->
-		<a class="learn-more dark" href="#about">Learn More</a>
+		<!-- <a class="learn-more dark" href="#about">Learn More</a> -->
 	</section>
 
 	<!-- About David Page -->
-	<section class="page header center">
+	<section class="page teal center">
 		<div id="about" class="scroll-to"></div>
 	  <div class="title">About the Author</div>
 	  <div class="about-container">
@@ -84,11 +92,11 @@
 			</div>
 	  </div>
 		<!-- Scroll Section -->
-		<a class="learn-more" href="#faq">Learn More</a>
+		<!-- <a class="learn-more" href="#faq">Learn More</a> -->
 	</section>
 
 	<!-- FAQ Page -->
-	<section class="page center">
+	<section class="container center">
 		<div id="faq" class="scroll-to"></div>
 	  <div class="title dark">Frequently Asked Questions</div>
 	  <div class="faq-container">
@@ -162,6 +170,141 @@
 	    </div>
 	  </div>
 	</section>
+
+	<!-- Secret Chapter Form -->
+	<section class="container teal center">
+		<div id="secret" class="scroll-to"></div>
+	  <div class="title">Hidden Chapter</div>
+	  <!-- First Section (hides on click) -->
+	  <div id="treasure">
+	  	<div class="chapter-info">This hidden chapter contains never-before-shared vignettes and a secret trick to save you money. In order to uncover it find the secret word from the novel then click the treasure chest.</div>
+	  	<img id="chest" src="./treasure-chest.png" alt="treasure chest to hidden chapter form"/>
+	  </div>
+	  <!-- Form Section (fill to get hidden chapter) -->
+		<div id="chapters" style="display:none; color:#fff">
+			<div class="chapter-info">To unlock the secrets and stories, let us know which three chapters in the book are your favorites and enter the code word from the novel to get your special treat.</div>
+			<select id="chapter1">
+				<option value="">First Favorite Chapter</option>
+				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
+				<option value="chapter 2">Chapter 2 - THE MISSION</option>
+				<option value="chapter 3">Chapter 3 - THE BASEMENT</option>
+				<option value="chapter 4">Chapter 4 - LONG-DISTANCE LOVE</option>
+				<option value="chapter 5">Chapter 5 - GOING ROGUE</option>
+				<option value="chapter 6">Chapter 6 - THE ABCs OF SENIOR LIVING</option>
+				<option value="chapter 7">Chapter 7 - INSIDER TOURING GUIDE AND SENIOR LIVING SECRETS</option>
+				<option value="chapter 8">Chapter 8 - THE HIDDEN REASON WHY</option>
+				<option value="chapter 9">Chapter 9 - #OLDLIVESMATTER</option>
+				<option value="chapter 10">Chapter 10 - DRAGON SENIORS</option>
+				<option value="chapter 11">Chapter 11 -  THE MOST IMPORTANT CONVERSATION</option>
+				<option value="chapter 12">Chapter 12 - THE HIT LIST</option>
+				<option value="chapter 13">Chapter 13 - THE HIDDEN CHAPTER</option>
+				<option value="chapter 14">Chapter 14 - THE REAL MOST IMPORTANT PERSON AND THE GRAVY</option>
+				<option value="chapter 15">Chapter 15 - SMART PREPPING FOR THE MOVE</option>
+				<option value="chapter 16">Chapter 16 - SECRET SAUCE</option>
+				<option value="chapter 17">Chapter 17 - SECRET SIGNS</option>
+				<option value="chapter 18">Chapter 18 - SENIORS GONE WILD</option>
+				<option value="chapter 19">Chapter 19 - RAW LAW</option>
+				<option value="chapter 20">Chapter 20 - DREAM MAKERS</option>
+				<option value="chapter 21">Chapter 21 - THE CRITICAL CONVERSATION NO ONE HAS</option>
+				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
+				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
+			</select>
+			<select id="chapter2">
+				<option value="">Second Favorite Chapter</option>
+				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
+				<option value="chapter 2">Chapter 2 - THE MISSION</option>
+				<option value="chapter 3">Chapter 3 - THE BASEMENT</option>
+				<option value="chapter 4">Chapter 4 - LONG-DISTANCE LOVE</option>
+				<option value="chapter 5">Chapter 5 - GOING ROGUE</option>
+				<option value="chapter 6">Chapter 6 - THE ABCs OF SENIOR LIVING</option>
+				<option value="chapter 7">Chapter 7 - INSIDER TOURING GUIDE AND SENIOR LIVING SECRETS</option>
+				<option value="chapter 8">Chapter 8 - THE HIDDEN REASON WHY</option>
+				<option value="chapter 9">Chapter 9 - #OLDLIVESMATTER</option>
+				<option value="chapter 10">Chapter 10 - DRAGON SENIORS</option>
+				<option value="chapter 11">Chapter 11 -  THE MOST IMPORTANT CONVERSATION</option>
+				<option value="chapter 12">Chapter 12 - THE HIT LIST</option>
+				<option value="chapter 13">Chapter 13 - THE HIDDEN CHAPTER</option>
+				<option value="chapter 14">Chapter 14 - THE REAL MOST IMPORTANT PERSON AND THE GRAVY</option>
+				<option value="chapter 15">Chapter 15 - SMART PREPPING FOR THE MOVE</option>
+				<option value="chapter 16">Chapter 16 - SECRET SAUCE</option>
+				<option value="chapter 17">Chapter 17 - SECRET SIGNS</option>
+				<option value="chapter 18">Chapter 18 - SENIORS GONE WILD</option>
+				<option value="chapter 19">Chapter 19 - RAW LAW</option>
+				<option value="chapter 20">Chapter 20 - DREAM MAKERS</option>
+				<option value="chapter 21">Chapter 21 - THE CRITICAL CONVERSATION NO ONE HAS</option>
+				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
+				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
+			</select>
+			<select id="chapter3">
+				<option value="">Third Favorite Chapter</option>
+				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
+				<option value="chapter 2">Chapter 2 - THE MISSION</option>
+				<option value="chapter 3">Chapter 3 - THE BASEMENT</option>
+				<option value="chapter 4">Chapter 4 - LONG-DISTANCE LOVE</option>
+				<option value="chapter 5">Chapter 5 - GOING ROGUE</option>
+				<option value="chapter 6">Chapter 6 - THE ABCs OF SENIOR LIVING</option>
+				<option value="chapter 7">Chapter 7 - INSIDER TOURING GUIDE AND SENIOR LIVING SECRETS</option>
+				<option value="chapter 8">Chapter 8 - THE HIDDEN REASON WHY</option>
+				<option value="chapter 9">Chapter 9 - #OLDLIVESMATTER</option>
+				<option value="chapter 10">Chapter 10 - DRAGON SENIORS</option>
+				<option value="chapter 11">Chapter 11 -  THE MOST IMPORTANT CONVERSATION</option>
+				<option value="chapter 12">Chapter 12 - THE HIT LIST</option>
+				<option value="chapter 13">Chapter 13 - THE HIDDEN CHAPTER</option>
+				<option value="chapter 14">Chapter 14 - THE REAL MOST IMPORTANT PERSON AND THE GRAVY</option>
+				<option value="chapter 15">Chapter 15 - SMART PREPPING FOR THE MOVE</option>
+				<option value="chapter 16">Chapter 16 - SECRET SAUCE</option>
+				<option value="chapter 17">Chapter 17 - SECRET SIGNS</option>
+				<option value="chapter 18">Chapter 18 - SENIORS GONE WILD</option>
+				<option value="chapter 19">Chapter 19 - RAW LAW</option>
+				<option value="chapter 20">Chapter 20 - DREAM MAKERS</option>
+				<option value="chapter 21">Chapter 21 - THE CRITICAL CONVERSATION NO ONE HAS</option>
+				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
+				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
+			</select>
+			<div class="subscribe-container">
+				<input class="subscribe__input email" type="email" value="" id="code" placeholder="Secret Code" required/>
+				<button id="hidden" class="button subscribe__button">
+					<span class="button__text">SUBMIT</span>
+				</button>
+			</div>
+			<div id="failed-attempt" style="display: none;">*form invalid, please double check the code submitted and that all dropdowns have been used*</div>
+		</div>
+	</section>
+
+	<!-- Sign Up Form -->
+	<section class="container center">
+		<div id="contact" class="scroll-to"></div>
+	  <div class="title dark">Contact Form</div>
+		<div id="subscribe" class="subscribe">
+			<div style="margin-bottom:16px">Please get in touch and let me know what you're interested in.</div>
+			<select id="message">
+				<option value="">Select an option</option>
+			  <option value="Adult child in need of advice">Adult child in need of advice</option>
+			  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
+			  <option value="Senior Living Executive">Senior Living Executive</option>
+			  <option value="Senior Living Staff">Senior Living Staff</option>
+			  <option value="Student interested in senior care">Student interested in senior care</option>
+			</select>
+			<div class="subscribe-container">
+				<input class="subscribe__input email" type="email" value="" id="email" placeholder="Email" required/>
+				<button id="form" class="button subscribe__button">
+					<span class="button__text">SUBMIT</span>
+				</button>
+			</div>
+			<div id="bad-email" style="display: none;">*valid email and selected option required*</div>
+		</div>
+		<div id="thanks" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
+	</section>
+
+	<!-- footer -->
+	<footer id="footer" class="container">
+		<div class="copyright">&copy; 2017. Unicorn Senior Living. All Rights Reserved.</div>
+		<div class="social-links">
+			<a href="https://www.facebook.com/Old-Lives-Matter-1664794523772995/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+			<a href="https://twitter.com/hashtag/oldlivesmatter?lang=en" target="_blank"><i class="fa fa-twitter-square"></i></a>
+			<a href="https://www.instagram.com/old_lives_matter/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+		</div>
+	</footer>
 
 	<!-- Back to Top -->
 	<a class="back-to-top" href="#top">Top</a>

@@ -20,11 +20,17 @@ section {
   font: inherit;
   vertical-align: baseline;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 .body {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: #000;
   min-width: 320px;
   width: 100%;
   position: relative;
-  background: #fff;
   font: normal 300 16px Arial, Helvetica, sans-serif;
 }
 .page {
@@ -38,7 +44,19 @@ section {
   min-width: 100vw;
   padding: 76px 16px;
 }
-.page.header {
+.page.teal {
+  background-color: #2295ba;
+}
+.container {
+  align-items: flex-start;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  padding: 76px 16px;
+}
+.container.teal {
   background-color: #2295ba;
 }
 .center {
@@ -70,13 +88,113 @@ section {
 /****************/
 /* MAIN SECTION */
 /****************/
+.top-images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .logo {
   height: auto;
-  max-height: 300px;
+  max-height: 400px;
   max-width: 100%;
   object-fit: contain;
   width: auto;
 }
+.book {
+  height: 300px;
+  left: 100%;
+  object-fit: contain;
+  top: 50%;
+  width: auto;
+  position: absolute;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .book {
+    position: relative;
+    left: 0;
+    top: 16px;
+  }
+}
+.margin-top {
+  margin-top: 56px;
+}
+.buy-line {
+  color: #fff;
+  font-size: 18px;
+}
+
+/****************/
+/* MAIN SECTION */
+/****************/
+.features-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: 60px 0 0;
+}
+.features-container .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97021;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 100px;
+  width: 100px;
+  padding: 8px;
+  text-align: center;
+  margin: 0;
+}
+.features-container .feature i {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+@media (max-width: 600px) {
+  .features-container {
+    flex-direction: column;
+    margin: 4px 0 0;
+  }
+
+  .features-container .feature {
+    margin: 56px 0 0;
+  }
+}
+
+/******************/
+/* HIDDEN CHAPTER */
+/******************/
+#treasure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0 0;
+  max-width: 500px;
+}
+#treasure div {
+  color: #fff;
+}
+#chest {
+  cursor: pointer;
+}
+.chapter-info {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+#failed-attempt {
+  font-weight: bold;
+}
+
+/******************/
+/* SUBSCRIBE FORM */
+/******************/
 .select-hidden {
   display: none;
   visibility: hidden;
@@ -92,6 +210,9 @@ section {
   height: 74px;
   margin-bottom: 16px;
   width: 100%;
+}
+.subscribe .select-styled {
+  background-color: #209dac;
 }
 .select-styled {
   border-radius: 5px;
@@ -141,6 +262,10 @@ section {
   list-style: none;
   background-color: #209dac;
 }
+#chapters .select-options li {
+  height: 36px;
+  font-size: 18px;
+}
 .select-options li {
   display: flex;
   align-items: center;
@@ -155,6 +280,10 @@ section {
   -webkit-transition: all 0.15s ease-in;
   transition: all 0.15s ease-in;
 }
+.subscribe .select-options li:hover {
+  background: #22a9b9;
+  color: #fff;
+}
 .select-options li:hover {
   color: #22a9b9;
   background: #fff;
@@ -163,13 +292,11 @@ section {
 
 .subscribe {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 60px auto;
   position: relative;
-  text-align: center;
-  text-transform: capitalize;
-  font: 200 35px/1 Arial, Helvetica, sans-serif;
-  color: #fff;
+  font: 200 18px/1 Arial, Helvetica, sans-serif;
   width: 80%;
+  text-align: left;
 }
 .subscribe:before,
 .subscribe:after {
@@ -182,6 +309,9 @@ section {
 .subscribe-container {
   display: inline-block;
   width: 100%;
+}
+.subscribe .subscribe__input {
+  background: #209dac;
 }
 .subscribe__input {
   display: block;
@@ -307,11 +437,11 @@ section {
   transition: opacity 0.2s ease;
 }
 #bad-email {
+  color: #ff0000;
   font-size: 16px;
   text-align: left;
 }
 #thanks {
-  color: #fff;
   font: 300 24px/1 Arial, Helvetica, sans-serif;
   height: 164px;
   padding: 60px 0 0;
@@ -358,7 +488,7 @@ section {
 /* About Section */
 /***************/
 .about-container {
-  margin-top: 32px;
+  margin-top: 60px;
   max-width: 90%;
 }
 .about-container .image-container {
@@ -366,8 +496,8 @@ section {
   float: left;
   margin: 16px 24px 24px 0;
   overflow: hidden;
-  height: 300px;
-  width: 211px;
+  height: 194px;
+  width: 137px;
 }
 @media (max-width: 600px) {
   .about-container .image-container {
@@ -404,7 +534,7 @@ section {
 /***************/
 .faq-container {
   max-width: 90%;
-  padding: 16px 0;
+  padding: 60px 0 0;
 }
 .faq-holder {
   position: relative;
@@ -483,6 +613,35 @@ section {
   margin: 0 0 16px;
   padding: 0;
   text-align: left;
+}
+
+/******************/
+/* Footer Section */
+/******************/
+#footer {
+  background-color: #32cd32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .copyright {
+  text-align: center;
+  margin: 0 0 16px;
+}
+#footer .social-links {
+  color: #fff;
+  font-size: 48px;
+  display: flex;
+  flex-direction: row;
+  max-width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+#footer .social-links a {
+  margin: 0 32px;
+}
+#footer .social-links a:hover {
+  color: #f97021;
 }
 
 /******************/
