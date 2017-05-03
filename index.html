@@ -39,11 +39,27 @@
 	  <div class="top-images">
 			<!-- Logo -->
 			<img class="logo" src="./UnicornSeniorLiving.png" alt="unicorn logo"/>
-			<!-- Book Image -->
-	  	<img class="book" src="./book.png" alt="book cover"/>
-	  	<!-- Buy Now -->
-	  	<a href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank" class="button margin-top"><span class="button__text">Amazon $18.88</span></a>
-	  	<div class="buy-line">Purchase this book today!</div>
+			<!-- Email Subscribe form -->
+			<div id="subscribe1" class="subscribe">
+				<div style="margin-bottom:16px">Please get in touch and let me know what you're interested in.</div>
+				<select id="message1">
+					<option value="">Select an option</option>
+				  <option value="Adult child in need of advice">Adult child in need of advice</option>
+				  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
+				  <option value="Senior Living Executive">Senior Living Executive</option>
+				  <option value="Senior Living Staff">Senior Living Staff</option>
+				  <option value="Student interested in senior care">Student interested in senior care</option>
+				  <option class="test" value="TEST">TEST</option>
+				</select>
+				<div class="subscribe-container">
+					<input class="subscribe__input email" type="email" value="" id="email1" placeholder="Email" required/>
+					<button id="form1" class="button subscribe__button">
+						<span class="button__text">SUBMIT</span>
+					</button>
+				</div>
+				<div id="bad-email1" style="display: none;">*valid email and selected option required*</div>
+			</div>
+			<div id="thanks1" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
 	  </div>
 		<!-- Scroll Section -->
 		<!-- <a class="learn-more" href="#more">Learn More</a> -->
@@ -54,22 +70,30 @@
 		<div id="more" class="scroll-to"></div>
 	  <div class="title dark">Featured Sections</div>
 		<div class="features-container">
-			<a href="#about" class="feature">
-				<i class="fa fa-user"></i>
-				<div class="info">About Author</div>
-			</a>
-			<a href="#faq" class="feature">
-				<i class="fa fa-question-circle-o"></i>
-				<div class="info">FAQ</div>
-			</a>
-			<a href="#secret" class="feature">
-				<i class="fa fa-lock"></i>
-				<div class="info">Hidden Chapter</div>
-			</a>
-			<a href="#contact" class="feature">
-				<i class="fa fa-envelope"></i>
-				<div class="info">Contact</div>
-			</a>
+			<div class="small-flex-50">
+				<a href="#about" class="feature">
+					<i class="fa fa-user"></i>
+					<div class="info">About Author</div>
+				</a>
+			</div>
+			<div class="small-flex-50">
+				<a href="#faq" class="feature">
+					<i class="fa fa-question-circle-o"></i>
+					<div class="info">FAQ</div>
+				</a>
+			</div>
+			<div class="small-flex-50">
+				<a href="#secret" class="feature">
+					<i class="fa fa-lock"></i>
+					<div class="info">Hidden Chapter</div>
+				</a>
+			</div>
+			<div class="small-flex-50">
+				<a href="#contact" class="feature">
+					<i class="fa fa-envelope"></i>
+					<div class="info">Contact</div>
+				</a>
+			</div>
 		</div>
 		<!-- Scroll Section -->
 		<!-- <a class="learn-more dark" href="#about">Learn More</a> -->
@@ -275,9 +299,9 @@
 	<section class="container center">
 		<div id="contact" class="scroll-to"></div>
 	  <div class="title dark">Contact Form</div>
-		<div id="subscribe" class="subscribe">
+		<div id="subscribe2" class="subscribe">
 			<div style="margin-bottom:16px">Please get in touch and let me know what you're interested in.</div>
-			<select id="message">
+			<select id="message2">
 				<option value="">Select an option</option>
 			  <option value="Adult child in need of advice">Adult child in need of advice</option>
 			  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
@@ -286,14 +310,14 @@
 			  <option value="Student interested in senior care">Student interested in senior care</option>
 			</select>
 			<div class="subscribe-container">
-				<input class="subscribe__input email" type="email" value="" id="email" placeholder="Email" required/>
-				<button id="form" class="button subscribe__button">
+				<input class="subscribe__input email" type="email" value="" id="email2" placeholder="Email" required/>
+				<button id="form2" class="button subscribe__button">
 					<span class="button__text">SUBMIT</span>
 				</button>
 			</div>
-			<div id="bad-email" style="display: none;">*valid email and selected option required*</div>
+			<div id="bad-email2" style="display: none;">*valid email and selected option required*</div>
 		</div>
-		<div id="thanks" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
+		<div id="thanks2" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
 	</section>
 
 	<!-- footer -->

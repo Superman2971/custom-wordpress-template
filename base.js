@@ -23,8 +23,8 @@ $(function() {
       if (i > 0) {
         $('<li />', {
           text: $this.children('option').eq(i).text(),
-          rel: $this.children('option').eq(i).val()
-        }).appendTo($list);
+          rel: $this.children('option').eq(i).val(),
+        }).addClass('list-option').appendTo($list);
       }
     }
     var $listItems = $list.children('li');
@@ -60,14 +60,28 @@ $(function() {
     });
   });
 
-  // Email system
-  $('#form').click(function() {
-    if (isEmail($('#email').val()) && $('#message option:selected').val()) {
-      emailjs.send("gmail", "template", {email: $('#email').val(), message: $('#message option:selected').val()});
-      $('#subscribe').hide();
-      $('#thanks').show();
+  // For Buy Now
+  $('.list-option').click(function() {
+    console.log('message1', $('#message1 option:selected').val(), 'message2', $('#message2 option:selected').val());
+  });
+  // Email Form #1
+  $('#form1').click(function() {
+    if (isEmail($('#email1').val()) && $('#message1 option:selected').val()) {
+      emailjs.send("gmail", "template", {email: $('#email1').val(), message: $('#message1 option:selected').val()});
+      $('#subscribe1').hide();
+      $('#thanks1').show();
     } else {
-      $('#bad-email').show();
+      $('#bad-email1').show();
+    }
+  });
+  // Email Form #2
+  $('#form2').click(function() {
+    if (isEmail($('#email2').val()) && $('#message2 option:selected').val()) {
+      emailjs.send("gmail", "template", {email: $('#email2').val(), message: $('#message2 option:selected').val()});
+      $('#subscribe2').hide();
+      $('#thanks2').show();
+    } else {
+      $('#bad-email2').show();
     }
   });
   // Open Hidden Form
