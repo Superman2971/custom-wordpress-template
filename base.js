@@ -62,8 +62,47 @@ $(function() {
 
   // For Buy Now
   $('.list-option').click(function() {
-    console.log('message1', $('#message1 option:selected').val(), 'message2', $('#message2 option:selected').val());
+    if ($('#message1 option:selected').val() === 'buy-now') {
+      $('#email1').hide();
+      $('#form1').hide();
+      $('#buy1').show();
+    } else {
+      $('#email1').show();
+      $('#form1').show();
+      $('#buy1').hide();
+    }
+    if ($('#message2 option:selected').val() === 'buy-now') {
+      $('#email2').hide();
+      $('#form2').hide();
+      $('#buy2').show();
+    } else {
+      $('#email2').show();
+      $('#form2').show();
+      $('#buy2').hide();
+    }
+    if ($('#chapter1 option:selected').val()) {
+      $('#reason1').show();
+    }
+    if ($('#chapter2 option:selected').val()) {
+      $('#reason2').show();
+    }
+    if ($('#chapter3 option:selected').val()) {
+      $('#reason3').show();
+    }
   });
+  // Adding Validation for Email
+  $('#email1').mouseenter(function() {
+    $('#need-email1').show();
+  })
+  $('#email1').mouseout(function() {
+    $('#need-email1').hide();
+  })
+  $('#email2').mouseenter(function() {
+    $('#need-email2').show();
+  })
+  $('#email2').mouseout(function() {
+    $('#need-email2').hide();
+  })
   // Email Form #1
   $('#form1').click(function() {
     if (isEmail($('#email1').val()) && $('#message1 option:selected').val()) {
@@ -71,7 +110,14 @@ $(function() {
       $('#subscribe1').hide();
       $('#thanks1').show();
     } else {
-      $('#bad-email1').show();
+      $('#bad-email1').hide();
+      $('#bad-select1').hide();
+      if (!isEmail($('#email1').val())) {
+        $('#bad-email1').show();
+      }
+      if (!$('#message1 option:selected').val()) {
+        $('#bad-select1').show();
+      }
     }
   });
   // Email Form #2
@@ -81,7 +127,14 @@ $(function() {
       $('#subscribe2').hide();
       $('#thanks2').show();
     } else {
-      $('#bad-email2').show();
+      $('#bad-email2').hide();
+      $('#bad-select2').hide();
+      if (!isEmail($('#email2').val())) {
+        $('#bad-email2').show();
+      }
+      if (!$('#message2 option:selected').val()) {
+        $('#bad-select2').show();
+      }
     }
   });
   // Open Hidden Form
@@ -92,16 +145,54 @@ $(function() {
   // Hidden Chapter Form
   $('#hidden').click(function() {
     if (isCorrectCode($('#code').val()) && $('#chapter1 option:selected').val() &&
-      $('#chapter2 option:selected').val() && $('#chapter3 option:selected').val()) {
-      emailjs.send("gmail", "hidden", {chapter1: $('#chapter1').val(),
-        chapter2: $('#chapter2').val(), chapter3: $('#chapter3').val()});
+      $('#chapter2 option:selected').val() && $('#chapter3 option:selected').val() &&
+      $('#reason1').val() && $('#reason2').val() && $('#reason3').val() && $('#name').val()
+      && isEmail($('#chapter-email').val())) {
+      emailjs.send("gmail", "hidden", {chapter1: $('#chapter1').val(), chapter2: $('#chapter2').val(),
+        chapter3: $('#chapter3').val(), reason1: $('#reason1').val(), reason2: $('#reason2').val(),
+        reason3: $('#reason3').val(), name: $('#name').val(), email: $('#chapter-email').val()});
       $('#chapters').hide();
       $('#treasure').show();
        window.open('./hidden_chapter.pdf');
     } else {
-      console.log(isCorrectCode($('#code').val()) && $('#chapter1 option:selected').val() &&
-      $('#chapter2 option:selected').val() && $('#chapter3 option:selected').val());
-      $('#failed-attempt').show();
+      // hide all
+      $('#code-bad').hide();
+      $('#chapter1-bad').hide();
+      $('#chapter2-bad').hide();
+      $('#chapter3-bad').hide();
+      $('#reason1-bad').hide();
+      $('#reason2-bad').hide();
+      $('#reason3-bad').hide();
+      $('#name-bad').hide();
+      $('#chapter-email-bad').hide();
+      // find and add any missing field validations
+      if (!isCorrectCode($('#code').val())) {
+        $('#code-bad').show();
+      }
+      if (!$('#chapter1 option:selected').val()) {
+        $('#chapter1-bad').show();
+      }
+      if (!$('#chapter2 option:selected').val()) {
+        $('#chapter2-bad').show();
+      }
+      if (!$('#chapter3 option:selected').val()) {
+        $('#chapter3-bad').show();
+      }
+      if ($('#chapter1 option:selected').val() && !$('#reason1').val()) {
+        $('#reason1-bad').show();
+      }
+      if ($('#chapter2 option:selected').val() && !$('#reason2').val()) {
+        $('#reason2-bad').show();
+      }
+      if ($('#chapter3 option:selected').val() && !$('#reason3').val()) {
+        $('#reason3-bad').show();
+      }
+      if (!$('#name').val()) {
+        $('#name-bad').show();
+      }
+      if (!isEmail($('#chapter-email').val())) {
+        $('#chapter-email-bad').show();
+      }
     }
   });
 

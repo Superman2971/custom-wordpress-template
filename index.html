@@ -11,11 +11,13 @@
 	<meta property="og:image" content="http://unicornseniorliving.com/favicon.png">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="icon" href="./favicon.ico" type="image/x-icon">
-	<title>Block Verify</title>
+	<title>Unicorn Senior Living - by David Slomovic</title>
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<link rel="stylesheet" href="./styles.css">
 	<!-- Icomoon Icon Fonts-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Font -->
+	<link href="https://www.fontify.me/wf/bafd62699919633cc040b268a3b88d96" rel="stylesheet" type="text/css">
 	<!--[if gte IE 9]
 	<style type="text/css">
 		.button {
@@ -36,33 +38,36 @@
 <body class="body">
 	<!-- Main Page -->
 	<header id="top" class="page teal center">
-	  <div class="top-images">
-			<!-- Logo -->
+		<!-- Logo -->
+		<div class="top-image">
 			<img class="logo" src="./UnicornSeniorLiving.png" alt="unicorn logo"/>
-			<!-- Email Subscribe form -->
-			<div id="subscribe1" class="subscribe">
-				<div style="margin-bottom:16px">Please get in touch and let me know what you're interested in.</div>
-				<select id="message1">
-					<option value="">Select an option</option>
-				  <option value="Adult child in need of advice">Adult child in need of advice</option>
-				  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
-				  <option value="Senior Living Executive">Senior Living Executive</option>
-				  <option value="Senior Living Staff">Senior Living Staff</option>
-				  <option value="Student interested in senior care">Student interested in senior care</option>
-				  <option class="test" value="TEST">TEST</option>
-				</select>
-				<div class="subscribe-container">
-					<input class="subscribe__input email" type="email" value="" id="email1" placeholder="Email" required/>
-					<button id="form1" class="button subscribe__button">
-						<span class="button__text">SUBMIT</span>
-					</button>
-				</div>
-				<div id="bad-email1" style="display: none;">*valid email and selected option required*</div>
+		</div>
+		<!-- Email Subscribe form -->
+		<div id="subscribe1" class="subscribe">
+			<div style="margin-bottom:16px">Please get in touch and let me know what you're interested in.</div>
+			<select id="message1">
+				<option value="">Select an option</option>
+			  <option value="Adult child in need of advice">Adult child in need of advice</option>
+			  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
+			  <option value="Senior Living Executive">Senior Living Executive</option>
+			  <option value="Senior Living Staff">Senior Living Staff</option>
+			  <option value="Student interested in senior care">Student interested in senior care</option>
+			  <option value="buy-now">Order Your Book Today</option>
+			</select>
+			<div id="bad-select1" style="display: none;">*Please select an option</div>
+			<div class="subscribe-container">
+				<input class="subscribe__input" type="email" value="" id="email1" placeholder="Email" required/>
+				<button id="form1" class="button subscribe__button">
+					<span class="button__text">KEEP UPDATED</span>
+				</button>
+				<a id="buy1" style="display: none;" class="button" href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">
+					<span class="button__text">Click Here</span>
+				</a>
 			</div>
-			<div id="thanks1" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
-	  </div>
-		<!-- Scroll Section -->
-		<!-- <a class="learn-more" href="#more">Learn More</a> -->
+			<div id="need-email1" style="display: none;">*This is a required field</div>
+			<div id="bad-email1" style="display: none;">*You must enter a valid email address and selected an option from the dropdown</div>
+		</div>
+		<div id="thanks1" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
 	</header>
 
 	<!-- Features Page -->
@@ -100,7 +105,7 @@
 	</section>
 
 	<!-- About David Page -->
-	<section class="page teal center">
+	<section class="container teal center minimize-padding">
 		<div id="about" class="scroll-to"></div>
 	  <div class="title">About the Author</div>
 	  <div class="about-container">
@@ -112,7 +117,7 @@
 				<p>Since the exit Mr. Slomovic has been both assisting operators and developers with understanding superior senior living marketing and operations techniques while also evaluating new opportunities. The steady stream of calls regarding staffing problems as well as senior placement and resident and staff satisfaction issues prompted Mr. Slomovic to consider writing a "tell all" book about senior living from the inside out where he reveals his insights and secrets about navigating the Assisted Living world as an outsider as well as how to boost profitability while cutting expenses as only a truly successful "hands on" insider would know.</p>
 				<p>Mr. Slomovic identifies the fixable flaws most Communities do not even know they have, exposes the secret reasons behind the industry's poor penetration, and makes an extraordinary case for senior living that the Aging industry somehow fails to understand.</p>
 				<p>David brand new book shares new truths about seniors, employees, making this transition work smoothly, and even criminal law, that you never expected or knew before.</p>
-				<p>Join Mr. Slomovic on his mission as he takes you through his extraordinary journey from criminal trial attorney to Assisted Living mogul in his new shocking and controversial book, The Unicorn Project: Insider Secrets of Senior Living Plus the Ultimate Step-by-Step Guide to Assisted Living - Now Available ONLINE at <a href="http://www.amazon.com/" target="_blank">AMAZON.COM</a></p>
+				<p>Join Mr. Slomovic on his mission as he takes you through his extraordinary journey from criminal trial attorney to Assisted Living mogul in his new shocking and controversial book, The Unicorn Project: Insider Secrets of Senior Living Plus the Ultimate Step-by-Step Guide to Assisted Living - Now Available ONLINE at <a href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">AMAZON.COM</a></p>
 			</div>
 	  </div>
 		<!-- Scroll Section -->
@@ -126,73 +131,104 @@
 	  <div class="faq-container">
 	    <div class="faq-holder">
 	      <div class="theQuestion">
-	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Lorem ipsum dolor sit amet, consectuetur adipsiscing elit</strong></p>
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>How many assisted living facilities are there in the U.S.?</strong></p>
 	        <div class="arrow"><i></i></div>
 	      </div>
 	      <div class="theAnswer-holder">
 	        <div class="theAnswer">
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	          <p>There are approximately 31,000 assisted living residences in the U.S. with approximately 7,500 in California alone.</p>
 	        </div>
 	      </div>
 	    </div>
 	    <div class="faq-holder">
 	      <div class="theQuestion">
-	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Lorem ipsum dolor sit amet, consectuetur adipsiscing elit</strong></p>
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>How many people live in assisted living facilities?</strong></p>
 	        <div class="arrow"><i></i></div>
 	      </div>
 	      <div class="theAnswer-holder">
 	        <div class="theAnswer">
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	          <p>Over one million people live in assisted living.</p>
 	        </div>
 	      </div>
 	    </div>
 	    <div class="faq-holder">
 	      <div class="theQuestion">
-	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Lorem ipsum dolor sit amet, consectuetur adipsiscing elit</strong></p>
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>What is the average cost of assisted living in California?</strong></p>
 	        <div class="arrow"><i></i></div>
 	      </div>
 	      <div class="theAnswer-holder">
 	        <div class="theAnswer">
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	          <p>According to SeniorHomes.com the average cost of assisted living in California is $3,750 per month. In the West Los Angeles, CA area prices currently range from $2,500-$7,200 a month. The national average is $2,877.</p>
 	        </div>
 	      </div>
 	    </div>
 	    <div class="faq-holder">
 	      <div class="theQuestion">
-	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Lorem ipsum dolor sit amet, consectuetur adipsiscing elit</strong></p>
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>What does it cost to live in an independent living facility?</strong></p>
 	        <div class="arrow"><i></i></div>
 	      </div>
 	      <div class="theAnswer-holder">
 	        <div class="theAnswer">
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	          <p>Independent living facilities tend to be less expensive and tend to range in costs between $2,000 to $3,500 a month.</p>
 	        </div>
 	      </div>
 	    </div>
 	    <div class="faq-holder">
 	      <div class="theQuestion">
-	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Lorem ipsum dolor sit amet, consectuetur adipsiscing elit</strong></p>
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>What is the difference between independent and assisted living?</strong></p>
 	        <div class="arrow"><i></i></div>
 	      </div>
 	      <div class="theAnswer-holder">
 	        <div class="theAnswer">
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	          <p>In independent living there likely is not an option of personal care support services available from the staff such as medication management, bathing, dressing, and other private services.</p>
 	        </div>
 	      </div>
 	    </div>
 	    <div class="faq-holder">
 	      <div class="theQuestion">
-	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Lorem ipsum dolor sit amet, consectuetur adipsiscing elit</strong></p>
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>What is the average length of stay?</strong></p>
 	        <div class="arrow"><i></i></div>
 	      </div>
 	      <div class="theAnswer-holder">
 	        <div class="theAnswer">
-	          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam.</p>
+	          <p>36 months is the average.</p>
 	        </div>
 	      </div>
 	    </div>
-	  </div>
+	    <div class="faq-holder">
+	      <div class="theQuestion">
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>What is the projection of growth of the elderly population?</strong></p>
+	        <div class="arrow"><i></i></div>
+	      </div>
+	      <div class="theAnswer-holder">
+	        <div class="theAnswer">
+	          <p>Per multiple sources, seniors are likely the fastest growing age group with 150% growth as an age group by 2020.</p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="faq-holder">
+	      <div class="theQuestion">
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>What is the average age of an assisted living resident?</strong></p>
+	        <div class="arrow"><i></i></div>
+	      </div>
+	      <div class="theAnswer-holder">
+	        <div class="theAnswer">
+	          <p>The average age of an assisted living resident has risen and the majority of residents are now 85 or older.</p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="faq-holder">
+	      <div class="theQuestion">
+	        <p><span>Q &nbsp;&nbsp;•</span> <strong>Is assisted living a nursing home?</strong></p>
+	        <div class="arrow"><i></i></div>
+	      </div>
+	      <div class="theAnswer-holder">
+	        <div class="theAnswer">
+	          <p>No, an assisted living community is not a nursing home and is not licensed to give nursing care. Generally assisted living communities are places where elderly adults live in a supervised community receiving various amenities with some personal care services available if desired.</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div> 
 	</section>
 
 	<!-- Secret Chapter Form -->
@@ -206,7 +242,7 @@
 	  </div>
 	  <!-- Form Section (fill to get hidden chapter) -->
 		<div id="chapters" style="display:none; color:#fff">
-			<div class="chapter-info">To unlock the secrets and stories, let us know which three chapters in the book are your favorites and enter the code word from the novel to get your special treat.</div>
+			<div class="chapter-info">To unlock the secrets and stories, let us know which three chapters in the book are your favorites and why. Then enter the code word from <a href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">The Unicorn Project</a> to get your special treat!</div>
 			<select id="chapter1">
 				<option value="">First Favorite Chapter</option>
 				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
@@ -233,6 +269,9 @@
 				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
 				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
 			</select>
+			<div id="chapter1-bad" style="display: none;">*This is a required field</div>
+			<textarea id="reason1" style="display:none" placeholder="Please share why you chose this chapter"></textarea>
+			<div id="reason1-bad" style="display: none;">*This is a required field</div>
 			<select id="chapter2">
 				<option value="">Second Favorite Chapter</option>
 				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
@@ -259,6 +298,9 @@
 				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
 				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
 			</select>
+			<div id="chapter2-bad" style="display: none;">*This is a required field</div>
+			<textarea id="reason2" style="display:none" placeholder="Please share why you chose this chapter"></textarea>
+			<div id="reason2-bad" style="display: none;">*This is a required field</div>
 			<select id="chapter3">
 				<option value="">Third Favorite Chapter</option>
 				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
@@ -285,13 +327,20 @@
 				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
 				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
 			</select>
+			<div id="chapter3-bad" style="display: none;">*This is a required field</div>
+			<textarea id="reason3" style="display:none" placeholder="Please share why you chose this chapter"></textarea>
+			<div id="reason3-bad" style="display: none;">*This is a required field</div>
+			<input class="subscribe__input full-width" id="name" placeholder="First Name" required/>
+			<div id="name-bad" style="display: none;">*This is a required field</div>
+			<input class="subscribe__input full-width" type="email" id="chapter-email" placeholder="Email" required/>
+			<div id="chapter-email-bad" style="display: none;">*This is a required field</div>
 			<div class="subscribe-container">
-				<input class="subscribe__input email" type="email" value="" id="code" placeholder="Secret Code" required/>
+				<input class="subscribe__input" type="email" value="" id="code" placeholder="Secret Code" required/>
 				<button id="hidden" class="button subscribe__button">
 					<span class="button__text">SUBMIT</span>
 				</button>
 			</div>
-			<div id="failed-attempt" style="display: none;">*form invalid, please double check the code submitted and that all dropdowns have been used*</div>
+			<div id="code-bad" style="display: none;">*Incorrect, please double check the code submitted</div>
 		</div>
 	</section>
 
@@ -308,14 +357,20 @@
 			  <option value="Senior Living Executive">Senior Living Executive</option>
 			  <option value="Senior Living Staff">Senior Living Staff</option>
 			  <option value="Student interested in senior care">Student interested in senior care</option>
+			  <option value="buy-now">Order Your Book Today</option>
 			</select>
+			<div id="bad-select2" style="display: none;">*Please select an option</div>
 			<div class="subscribe-container">
-				<input class="subscribe__input email" type="email" value="" id="email2" placeholder="Email" required/>
+				<input class="subscribe__input" type="email" value="" id="email2" placeholder="Email" required/>
 				<button id="form2" class="button subscribe__button">
-					<span class="button__text">SUBMIT</span>
+					<span class="button__text">KEEP UPDATED</span>
 				</button>
+				<a id="buy2" style="display: none;" class="button" href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">
+					<span class="button__text">Click Here</span>
+				</a>
 			</div>
-			<div id="bad-email2" style="display: none;">*valid email and selected option required*</div>
+			<div id="need-email2" style="display: none;">*This is a required field</div>
+			<div id="bad-email2" style="display: none;">*You must enter a valid email address and selected an option from the dropdown</div>
 		</div>
 		<div id="thanks2" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
 	</section>
