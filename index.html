@@ -54,20 +54,20 @@
 			  <option value="Student interested in senior care">Student interested in senior care</option>
 			  <option value="buy-now">Order Your Book Today</option>
 			</select>
-			<div id="bad-select1" style="display: none;">*Please select an option</div>
+			<div id="bad-select1" style="display: none" class="validation move">*Please select an option</div>
 			<div class="subscribe-container">
-				<input class="subscribe__input" type="email" value="" id="email1" placeholder="Email" required/>
+				<input class="subscribe__input" type="email" value="" id="email1" placeholder="Email" />
 				<button id="form1" class="button subscribe__button">
 					<span class="button__text">KEEP UPDATED</span>
 				</button>
-				<a id="buy1" style="display: none;" class="button" href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">
+				<a id="buy1" style="display: none" class="button" href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">
 					<span class="button__text">Click Here</span>
 				</a>
 			</div>
-			<div id="need-email1" style="display: none;">*This is a required field</div>
-			<div id="bad-email1" style="display: none;">*You must enter a valid email address and selected an option from the dropdown</div>
+			<div id="need-email1" style="display: none" class="validation">*This is a required field</div>
+			<div id="bad-email1" style="display: none" class="validation">*You must enter a valid email address</div>
 		</div>
-		<div id="thanks1" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
+		<div id="thanks1" style="display: none">Email Sent, we will respond to you soon. Thanks!</div>
 	</header>
 
 	<!-- Features Page -->
@@ -269,9 +269,9 @@
 				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
 				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
 			</select>
-			<div id="chapter1-bad" style="display: none;">*This is a required field</div>
+			<div id="chapter1-bad" style="display: none" class="validation move">*This is a required field</div>
 			<textarea id="reason1" style="display:none" placeholder="Please share why you chose this chapter"></textarea>
-			<div id="reason1-bad" style="display: none;">*This is a required field</div>
+			<div id="reason1-bad" style="display: none" class="validation move">*This is a required field</div>
 			<select id="chapter2">
 				<option value="">Second Favorite Chapter</option>
 				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
@@ -298,9 +298,9 @@
 				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
 				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
 			</select>
-			<div id="chapter2-bad" style="display: none;">*This is a required field</div>
+			<div id="chapter2-bad" style="display: none" class="validation move">*This is a required field</div>
 			<textarea id="reason2" style="display:none" placeholder="Please share why you chose this chapter"></textarea>
-			<div id="reason2-bad" style="display: none;">*This is a required field</div>
+			<div id="reason2-bad" style="display: none" class="validation move">*This is a required field</div>
 			<select id="chapter3">
 				<option value="">Third Favorite Chapter</option>
 				<option value="chapter 1">Chapter 1 - ASSUMPTIONS</option>
@@ -327,20 +327,20 @@
 				<option value="chapter 22">Chapter 22 - THE MISTAKE WE NEVER REALIZE OR ADMIT</option>
 				<option value="chapter 23">Chapter 23 - THE END OF THE BEGINNING</option>
 			</select>
-			<div id="chapter3-bad" style="display: none;">*This is a required field</div>
+			<div id="chapter3-bad" style="display: none" class="validation move">*This is a required field</div>
 			<textarea id="reason3" style="display:none" placeholder="Please share why you chose this chapter"></textarea>
-			<div id="reason3-bad" style="display: none;">*This is a required field</div>
-			<input class="subscribe__input full-width" id="name" placeholder="First Name" required/>
-			<div id="name-bad" style="display: none;">*This is a required field</div>
-			<input class="subscribe__input full-width" type="email" id="chapter-email" placeholder="Email" required/>
-			<div id="chapter-email-bad" style="display: none;">*This is a required field</div>
+			<div id="reason3-bad" style="display: none" class="validation move">*This is a required field</div>
+			<input class="subscribe__input full-width" id="name" placeholder="First Name" />
+			<div id="name-bad" style="display: none" class="validation move">*This is a required field</div>
+			<input class="subscribe__input full-width" type="email" id="chapter-email" placeholder="Email" />
+			<div id="chapter-email-bad" style="display: none" class="validation move">*This is a required field</div>
 			<div class="subscribe-container">
-				<input class="subscribe__input" type="email" value="" id="code" placeholder="Secret Code" required/>
+				<input class="subscribe__input" type="email" value="" id="code" placeholder="Secret Code" />
 				<button id="hidden" class="button subscribe__button">
 					<span class="button__text">SUBMIT</span>
 				</button>
 			</div>
-			<div id="code-bad" style="display: none;">*Incorrect, please double check the code submitted</div>
+			<div id="code-bad" style="display: none" class="validation">*Incorrect, please double check the code submitted</div>
 		</div>
 	</section>
 
@@ -352,28 +352,42 @@
 			<div style="margin-bottom:16px">Please get in touch and let me know what you're interested in.</div>
 			<select id="message2">
 				<option value="">Select an option</option>
-			  <option value="Adult child in need of advice">Adult child in need of advice</option>
-			  <option value="Senior seeking assisted living">Senior seeking assisted living</option>
-			  <option value="Senior Living Executive">Senior Living Executive</option>
-			  <option value="Senior Living Staff">Senior Living Staff</option>
-			  <option value="Student interested in senior care">Student interested in senior care</option>
+			  <option value="Attend A Live Event">Attend A Live Event</option>
+			  <option value="Book David">Book David</option>
+			  <option value="Coaching">Coaching</option>
+			  <option value="Join The Mission">Join The Mission</option>
+			  <option value="Work for Unicorn">Work for Unicorn</option>
+			  <option value="Other">Other</option>
 			  <option value="buy-now">Order Your Book Today</option>
 			</select>
-			<div id="bad-select2" style="display: none;">*Please select an option</div>
+			<div id="bad-select2" style="display: none" class="validation move">*Please select an option</div>
+			<textarea id="other" style="display: none" placeholder="Send us a message..."></textarea>
 			<div class="subscribe-container">
-				<input class="subscribe__input" type="email" value="" id="email2" placeholder="Email" required/>
-				<button id="form2" class="button subscribe__button">
+				<input class="subscribe__input" type="email" value="" id="email2" placeholder="Email" />
+				<button id="form2" class="button subscribe__button green">
 					<span class="button__text">KEEP UPDATED</span>
 				</button>
-				<a id="buy2" style="display: none;" class="button" href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">
+				<a id="buy2" style="display: none" class="button" href="https://www.amazon.com/dp/0692879390/ref=sr_1_3?s=books&ie=UTF8&qid=1493270008&sr=1-3&keywords=The+Unicorn+Project" target="_blank">
 					<span class="button__text">Click Here</span>
 				</a>
 			</div>
-			<div id="need-email2" style="display: none;">*This is a required field</div>
-			<div id="bad-email2" style="display: none;">*You must enter a valid email address and selected an option from the dropdown</div>
+			<div id="need-email2" style="display: none" class="validation">*This is a required field</div>
+			<div id="bad-email2" style="display: none" class="validation">*You must enter a valid email address and selected an option from the dropdown</div>
 		</div>
-		<div id="thanks2" style="display: none;">Email Sent, we will respond to you soon. Thanks!</div>
+		<div id="thanks2" style="display: none">Thank You for your interest. We will be in touch shortly!</div>
 	</section>
+
+	<!-- Sign Up Form Success Modals -->
+	<div id="pop-up" class="shadow" style="display: none">
+		<div class="modal">
+			<div id="live-event" style="display: none">Thank you for your interest. We will update you with upcoming events in the near future!</div>
+			<div id="book-david" style="display: none">
+				<div style="margin-bottom:16px">To book David Slomovic as a speaker at your event, seminar or otherwise please contact:</div>
+				<div>Unicorn / Speaking Events</div>
+				<div>310.278.5009 Ext 4</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- footer -->
 	<footer id="footer" class="container">

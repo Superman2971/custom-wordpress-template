@@ -75,10 +75,17 @@ $(function() {
       $('#email2').hide();
       $('#form2').hide();
       $('#buy2').show();
+      $('#other').hide();
+    } else if ($('#message2 option:selected').val() === 'Other') {
+      $('#email2').show();
+      $('#form2').show();
+      $('#buy2').hide();
+      $('#other').show();
     } else {
       $('#email2').show();
       $('#form2').show();
       $('#buy2').hide();
+      $('#other').hide();
     }
     if ($('#chapter1 option:selected').val()) {
       $('#reason1').show();
@@ -105,13 +112,13 @@ $(function() {
   })
   // Email Form #1
   $('#form1').click(function() {
+    $('#bad-email1').hide();
+    $('#bad-select1').hide();
     if (isEmail($('#email1').val()) && $('#message1 option:selected').val()) {
       emailjs.send("gmail", "template", {email: $('#email1').val(), message: $('#message1 option:selected').val()});
       $('#subscribe1').hide();
       $('#thanks1').show();
     } else {
-      $('#bad-email1').hide();
-      $('#bad-select1').hide();
       if (!isEmail($('#email1').val())) {
         $('#bad-email1').show();
       }
@@ -122,13 +129,31 @@ $(function() {
   });
   // Email Form #2
   $('#form2').click(function() {
+    $('#bad-email2').hide();
+    $('#bad-select2').hide();
     if (isEmail($('#email2').val()) && $('#message2 option:selected').val()) {
-      emailjs.send("gmail", "template", {email: $('#email2').val(), message: $('#message2 option:selected').val()});
-      $('#subscribe2').hide();
-      $('#thanks2').show();
+      // emailjs.send("gmail", "template", {email: $('#email2').val(), message: $('#message2 option:selected').val(), text: $('#other').val()});
+      // pop up the response
+      if ($('#message2 option:selected').val() === 'Book David') {
+        $('#live-event').hide();
+        $('#book-david').show();
+        $('#pop-up').show();
+      } else {
+        $('#live-event').show();
+        $('#book-david').hide();
+        $('#pop-up').show();
+        $('#other').hide();
+      }
+      // remove the selected option
+      $('#message2').prop('selectedIndex', 0);
+      $('select').each(function() {
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+        var $styledSelect = $this.next('div.select-styled');
+        $styledSelect.text($this.children('option').eq(0).text());
+      });
+      // remove the email
+      $('#email2').val('');
     } else {
-      $('#bad-email2').hide();
-      $('#bad-select2').hide();
       if (!isEmail($('#email2').val())) {
         $('#bad-email2').show();
       }
@@ -137,6 +162,10 @@ $(function() {
       }
     }
   });
+  // Close Pop-up modals
+  $('#pop-up').click(function() {
+    $('#pop-up').hide();
+  });
   // Open Hidden Form
   $('#chest').click(function() {
     $('#treasure').hide();
@@ -144,6 +173,17 @@ $(function() {
   });
   // Hidden Chapter Form
   $('#hidden').click(function() {
+    // hide all
+    $('#code-bad').hide();
+    $('#chapter1-bad').hide();
+    $('#chapter2-bad').hide();
+    $('#chapter3-bad').hide();
+    $('#reason1-bad').hide();
+    $('#reason2-bad').hide();
+    $('#reason3-bad').hide();
+    $('#name-bad').hide();
+    $('#chapter-email-bad').hide();
+    // check if all inputs filled
     if (isCorrectCode($('#code').val()) && $('#chapter1 option:selected').val() &&
       $('#chapter2 option:selected').val() && $('#chapter3 option:selected').val() &&
       $('#reason1').val() && $('#reason2').val() && $('#reason3').val() && $('#name').val()
@@ -155,16 +195,6 @@ $(function() {
       $('#treasure').show();
        window.open('./hidden_chapter.pdf');
     } else {
-      // hide all
-      $('#code-bad').hide();
-      $('#chapter1-bad').hide();
-      $('#chapter2-bad').hide();
-      $('#chapter3-bad').hide();
-      $('#reason1-bad').hide();
-      $('#reason2-bad').hide();
-      $('#reason3-bad').hide();
-      $('#name-bad').hide();
-      $('#chapter-email-bad').hide();
       // find and add any missing field validations
       if (!isCorrectCode($('#code').val())) {
         $('#code-bad').show();
