@@ -45,7 +45,7 @@ a {
   min-height: 100vh;
   position: relative;
   min-width: 100vw;
-  padding: 76px 16px;
+  padding: 0 16px;
 }
 .page.teal {
   background-color: #2295ba;
@@ -171,6 +171,7 @@ a {
   justify-content: center;
   margin: 60px 0 0;
   max-width: 500px;
+  width: 100%;
 }
 #treasure div {
   color: #fff;
@@ -180,7 +181,6 @@ a {
 }
 .chapter-info {
   font-size: 18px;
-  margin-bottom: 16px;
 }
 .chapter-info a {
   color: #32cd32;
@@ -319,7 +319,6 @@ textarea:-moz-placeholder { /* Firefox 18- */
   margin: 60px auto;
   position: relative;
   font: 200 18px/1 font116392, Arial, Helvetica, sans-serif;
-  width: 80%;
   text-align: left;
 }
 .subscribe:before,

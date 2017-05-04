@@ -132,7 +132,7 @@ $(function() {
     $('#bad-email2').hide();
     $('#bad-select2').hide();
     if (isEmail($('#email2').val()) && $('#message2 option:selected').val()) {
-      // emailjs.send("gmail", "template", {email: $('#email2').val(), message: $('#message2 option:selected').val(), text: $('#other').val()});
+      emailjs.send("gmail", "template", {email: $('#email2').val(), message: $('#message2 option:selected').val(), text: $('#other').val()});
       // pop up the response
       if ($('#message2 option:selected').val() === 'Book David') {
         $('#live-event').hide();
