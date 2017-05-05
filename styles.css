@@ -183,7 +183,7 @@ a {
   font-size: 18px;
 }
 .chapter-info a {
-  color: #32cd32;
+  color: #f97021;
 }
 .chapter-info a:hover {
   text-decoration: underline;
@@ -433,6 +433,7 @@ textarea:-moz-placeholder { /* Firefox 18- */
 .button__text {
   position: relative;
   z-index: 10;
+  text-align: center;
 }
 .validation {
   font-size: 16px;
@@ -523,7 +524,7 @@ textarea:-moz-placeholder { /* Firefox 18- */
   font: 400 18px/1 font116392, Arial, Helvetica, sans-serif;
 }
 .about-container .text-container a {
-  color: #32cd32;
+  color: #f97021;
   cursor: pointer;
 }
 .about-container .text-container a:hover {
@@ -648,10 +649,13 @@ textarea:-moz-placeholder { /* Firefox 18- */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 32px 16px;
+  border-top: 8px solid #f97021;
 }
 #footer .copyright {
   text-align: center;
-  margin: 0 0 16px;
+  color: #fff;
+  margin: 8px 0 0;
 }
 #footer .social-links {
   color: #fff;

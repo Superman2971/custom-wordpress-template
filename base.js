@@ -136,10 +136,17 @@ $(function() {
       // pop up the response
       if ($('#message2 option:selected').val() === 'Book David') {
         $('#live-event').hide();
+        $('#be-in-touch').hide();
         $('#book-david').show();
         $('#pop-up').show();
-      } else {
+      } else if ($('#message2 option:selected').val() === 'Attend A Live Event') {
         $('#live-event').show();
+        $('#be-in-touch').hide();
+        $('#book-david').hide();
+        $('#pop-up').show();
+      } else {
+        $('#be-in-touch').show();
+        $('#live-event').hide();
         $('#book-david').hide();
         $('#pop-up').show();
         $('#other').hide();
